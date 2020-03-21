@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light|Source+Sans+Pro:400,700|montserrat");
+html{
+  scroll-behavior: smooth;
+}
+
+/*
+gree #29B689
+bla #1D1E20
+greneed #1E7A59
+*/
+
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: montserrat;
+  text-decoration: none;
+  background-color: #131c29;
+  color: #fff;
+  /* background: url(../img/bg3.jpg) no-repeat center center fixed; */
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.wrapper .sidebar{
+  position: fixed;
+  top: 35%;
+  left: 5px;
+  background: 	#2d5391;
+  width: 30px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 8px;
+    color: #fff;
+    position: relative;
+    margin-bottom: 1px;
+    color: #92a6e2;
+    white-space: nowrap;
+}
+.wrapper .sidebar i{
+  color: white;
+  padding-top: 10px;
+  align-items: center;
+}
+.wrapper .sidebar i:hover{
+  color: #1b9bff;
+  padding-top: 10px;
+  align-items: center;
+  transition-duration: .5s;
+}
+
+.wrapper .sidebar ul li a:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: #92a6e2;
+  display: none;
+}
+#view{
+  position: relative;
+    top: 47vh;
+}
+#add{
+    position: relative;
+    top: 47vh;
+}
+.box{
+  margin-left: 40px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  align-content: center;
+  background-color: rgb(36, 52, 77, 0.5);
+  /* background-color:#fff; */
+  border-radius: 1cm;
+  height: 100vh;
+  /* box-shadow: 0 0 30px #ededed; */
+}
+.box1{
+  margin-left: 40px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  /* background-color:#fff; */
+  border-radius: 1cm;
+  height: 100%;
+}
+.home{
+  padding-top: 40px;
+  background-size: contain;
+  /* background: url(../img/bg2.jpg) no-repeat; */
+  background-color: rgba(0, 0, 0, 0.0);
+  height: 95vh;
+  color: fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.contents {
+  padding: 80px 0px 120px;
+}
+
+.hme-cntnt {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 35px;
+  letter-spacing: 5px;;
+}
+.hme-name{
+  color: #fff;
+  font-size: 70px;
+  letter-spacing: 15px;
+  /* font-family: 'Bahianita', cursive; */
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.btn-abt{
+  color: white;
+  background-color: #1b9bff;
+  font-size: 16px;
+  padding: 7px 13px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+}
+.btn-abt:hover{
+  color: #1b9bff;
+  background-color: white;
+  font-size: 16px;
+  padding: 7px 13px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition-duration: .5s;
+}
+
+.adduser{
+  padding: 40px 0 10px;
+  
+  padding-top: 80px;
+}
+.abt-image{
+  border-radius: 60px;
+  border: 1px solid #24344d;
+}
+
+.profile-wrapper {
+  padding: 65px 0;
+}
+.profile-wrapper h3{
+  font-size: 22px;
+  font-weight: bold;
+}
+.profile-wrapper p{
+  font-size: 15px;
+}
+
+.about-profile {
+  position: relative;
+  margin: 20px 0 20px 0;
+  font-size: 12px;
+}
+
+.about-profile .pro-title {
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  width: 120px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.about-profile .pro-title:after {
+  position: absolute;
+  content: ':';
+  color: #fff;
+  font-size: 14px;
+  left: 110px;
+}
+.add{
+  padding: 20px 0 10px;
+  padding-top: 70px;
+}
+.resume h1{
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.socialmedia{
+  padding-top: 35px;
+  align-items: center;
+  text-decoration: none;
+}
+.socialmedia a{
+  padding-right: 10px;
+}
+.socialmedia button{
+  height: 35px;
+  width: 35px;
+  color: #2d5391;
+  background: #EFFBEF;
+  border-style: solid;
+  text-decoration: none;
+  border-radius: 30%;
+}
+.socialmedia button:hover{
+  color: #EFFBEF;
+  background: #2d5391;
+  border-style: solid;
+  border-radius: 20%;
+  transition-duration: .3s;
+  text-decoration: blanchedalmond;
+}
+
+footer{
+  height: 50px;
+  background-color: #000;
+  font-size: 13px;
+  position: static;
+
+}
+
+.madeby p{
+  padding-top: 15px;
+  color: #555454;
+}

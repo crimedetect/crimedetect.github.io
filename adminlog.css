@@ -1,0 +1,132 @@
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 10px 0px 0px;
+  display: inline-block;
+  border: 2px solid #a1a;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+/*set a style for the buttons*/
+input[type="submit"] {
+  background-color: #00ffcc;
+  color: white;
+  align-content: center;
+  text-align: center;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 20px;
+}
+#id04{
+    width: 300px;
+    height: 500px;
+    top: -57px;
+    left: 330px;
+    margin: 150px 200px 300px 200px;
+
+}
+.closev {
+  position: relative;
+  left: 250px;
+  top: auto;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.closev:hover,
+.closev:focus {
+  color: blue;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #ff7256;
+  opacity: 0.5;
+}
+/*set padding to the container*/
+.contain {
+  width: 200px;
+  position: absolute;
+  margin: 25px 580px;
+  background-color: #fc109c;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/*set the Modal background*/
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 29%;
+  top: 0;
+  width: 200px;
+  height: 900px;
+  overflow: auto;
+  background-color: grey;
+  background-color: transparent;
+  padding-top: 60px;
+}
+
+/*style the model content box*/
+.modal-content {
+  background-color: white;
+  margin: 15px 4px;
+  border: none;
+  width: 50%;
+}
+
+/*style the close button*/
+.close {
+  position: absolute;
+  right: 500px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: blue;
+  cursor: pointer;
+}
+
+/* add zoom animation*/
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}

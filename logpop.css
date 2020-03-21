@@ -1,0 +1,138 @@
+input[type=text], 
+    input[type=password] { 
+        width: 100%; 
+        padding: 12px 20px; 
+        margin: 8px 10px 0px 0px;
+        display: inline-block; 
+        border: 2px solid #a1a; 
+        box-sizing: border-box; 
+      border-radius:20px;
+    } 
+    
+    /*set a style for the buttons*/ 
+    button { 
+        background-color: #4CAF50; 
+        color: white; 
+       
+        padding: 14px 20px; 
+        margin: 8px 0; 
+        border: none; 
+        cursor: pointer; 
+        width: 200px; 
+        border-radius:20px;
+    } 
+input[type=submit]{
+  background-color: #00ffcc; 
+        color: white;
+         align-content:center;
+        text-align:center;
+        padding: 14px 20px; 
+        margin: 8px 0; 
+        border: none; 
+        cursor: pointer; 
+        width: 100%; 
+  border-radius:20px;
+}
+    
+    /* set a hover effect for the button*/ 
+    button:hover { 
+        opacity: 0.8;
+      border-radius:20px;
+    } 
+input[type=submit]:hover{
+  background-color:#ff7256;
+  opacity: 0.5;
+}
+    
+ 
+    
+    /*centre the display image inside the container*/ 
+    .imgcontainer { 
+        text-align: center; 
+        margin: 0px 0 0px 0; 
+        position: relative; 
+    }  
+    
+    /*set padding to the container*/ 
+    .container { 
+        width: 300px;
+        position:relative;
+        margin:100px;
+        background-color:#FC109C;
+        padding: 20px;
+        margin-right: 60%;
+      border-radius:20px;
+    } 
+      
+    /*set the Modal background*/ 
+    .modal { 
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 29%; 
+        top: 0; 
+        width: 700px; 
+        height: 900px; 
+        overflow: auto; 
+        background-color: grey; 
+        background-color: transparent; 
+        padding-top: 60px; 
+    } 
+    
+    /*style the model content box*/ 
+    .modal-content { 
+        background-color: white; 
+        margin: 20px 40px; 
+        border: 5px solid black; 
+        width: 75%; 
+    } 
+    
+    /*style the close button*/ 
+    .close { 
+        position: absolute; 
+        right: 25px; 
+        top: 0; 
+        color: #000; 
+        font-size: 35px; 
+        font-weight: bold; 
+    } 
+      
+    .close:hover, 
+    .close:focus { 
+        color: red; 
+        cursor: pointer; 
+    } 
+    
+    /* add zoom animation*/ 
+    .animate { 
+        -webkit-animation: animatezoom 0.6s; 
+        animation: animatezoom 0.6s 
+    } 
+      
+    @-webkit-keyframes animatezoom { 
+        from { 
+            -webkit-transform: scale(0) 
+        } 
+        to { 
+            -webkit-transform: scale(1) 
+        } 
+    } 
+      
+    @keyframes animatezoom { 
+        from { 
+            transform: scale(0) 
+        } 
+        to { 
+            transform: scale(1) 
+        } 
+    } 
+      
+    @media screen and (max-width: 300px) { 
+        span.psw { 
+            display: block; 
+            float: none; 
+        } 
+        .cancelbtn { 
+            width: 100%; 
+        } 
+    } 

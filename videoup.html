@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>home||Crime detect</title>
+	<link rel="stylesheet" type="text/css" href="homestyle.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+</head>
+
+<body>
+<img src="logo.png"  width="25%" height="100px">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="home.html">Home</a></li>
+      <li class="active"><a href="upload.html">UPLOAD</a>
+      <li><a href="about.html">ABOUT</a></li>
+      </li>
+    </ul>
+  </div>
+</nav>
+<marquee>Help line : 000-111-222 </marquee>
+<script>
+var stateObject = {
+"India": { "Delhi": ["new Delhi", "North Delhi"],
+"Kerala": ["Thiruvananthapuram", "Palakkad","Idukki","Malappuram"],
+"Goa": ["North Goa", "South Goa"]
+}}
+window.onload = function () {
+var countySel = document.getElementById("countySel"),
+stateSel = document.getElementById("stateSel"),
+districtSel = document.getElementById("districtSel");
+for (var country in stateObject) {
+countySel.options[countySel.options.length] = new Option(country, country);
+}
+countySel.onchange = function () {
+stateSel.length = 1; // remove all options bar first
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done 
+for (var state in stateObject[this.value]) {
+stateSel.options[stateSel.options.length] = new Option(state, state);
+}
+}
+countySel.onchange(); // reset in case page is reloaded
+stateSel.onchange = function () {
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done 
+var district = stateObject[countySel.value][this.value];
+for (var i = 0; i < district.length; i++) {
+districtSel.options[districtSel.options.length] = new Option(district[i], district[i]);
+}
+}
+}
+</script>
+		<div>
+		<font color="skyblue" size="5">
+		<fieldset style="float:center;background-color:black">
+	<center><h2><u>UPLOAD VIDEO EVIDENCE</u></h2></center>
+			<font size="4">
+				<form name="myform" id="myForm" action="vidup.php" method="POST" enctype="multipart/form-data">
+					<div align="center">
+						<input type="file" name="file" >
+					</div><br>
+					<div align="center">
+						Select Country: <select name="state" id="countySel" size="1">
+					<option value="" selected="selected">Select Country</option>
+					</select><br>
+					<br>
+				Select State: <select name="countrya" id="stateSel" size="1">
+				<option value="" selected="selected">Please select Country first</option>
+				</select>
+				<br>
+				<br>
+				Select District: <select name="district" id="districtSel" size="1">
+				<option value="" selected="selected">Please select State first</option>
+				</select><br>
+				<br>
+				Select Category/Type:<select name="typ" id="typsel" size="1">
+				<option value="police" selected="selected">Police</option>
+				<option value="forest">Forest</option>
+				<option value="incometax">Income tax</option>
+				<option value="narcotics">Narcotics</option>
+				</select><br>
+					</div><br>
+					<div align="center">
+					<textarea rows="3" cols="50" name="discrip" placeholder="Describe something about incident {eg. Date and Time}"></textarea>
+					</div>
+					<div align="center">
+					<input type="submit" value="SUBMIT" >
+				</form>	
+		</fieldset>
+		</div>
+</font>
+	</body>
+</html>

@@ -1,0 +1,8 @@
+<?php
+			$conn = mysqli_connect("localhost","root","","crimedetect");
+            $sql="select usr from log";
+			$m=mysqli_query($conn,$sql);
+            while(!mysqli_fetch_array($m)){
+				echo $row['usr'];
+			}
+?>
