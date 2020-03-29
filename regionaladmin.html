@@ -2,7 +2,8 @@
 <?php
 session_start();
             $username=$_SESSION['username'];
-echo '<!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>R - CRIMEDETECT</title>
@@ -357,7 +358,8 @@ font-family: "dosis", sans-serif;
     };
 </script>
 </section>
-<section id="count" class="box">';
+<section id="count" class="box">
+  <?php
             
             $conn1 = mysqli_connect("localhost","root","","crimedetect");
             $sql1="select count(*) from imgpolice where district ='".$username."';";
@@ -401,50 +403,50 @@ font-family: "dosis", sans-serif;
             $nv=$row8["count(*)"];
 
 
-    echo '
+   ?>
 	<h1>COUNT</h1>
-	<h1>Number of image uploads in '.$username.'</h1>
+	<h1>Number of image uploads</h1>
     <div class="wrapper">
     <div class="counter col_fourth">
-      <h2 class="timer count-title count-number" data-to="'.$p.'" data-speed="1500"></h2>
+      <h2 class="timer count-title count-number" data-to="1766" data-speed="1500"></h2>
        <p class="count-text ">POLICE</p>
     </div>
 
     <div class="counter col_fourth">
-      <h2 class="timer count-title count-number" data-to="'.$i.'" data-speed="1500"></h2>
+      <h2 class="timer count-title count-number" data-to="5677" data-speed="1500"></h2>
       <p class="count-text ">INCOME TAX</p>
     </div>
 
     <div class="counter col_fourth">
-      <h2 class="timer count-title count-number" data-to="'.$f.'" data-speed="1500"></h2>
+      <h2 class="timer count-title count-number" data-to="6666" data-speed="1500"></h2>
       <p class="count-text ">FOREST</p>
     </div>
 
     <div class="counter col_fourth end">
-      <h2 class="timer count-title count-number" data-to="'.$n.'" data-speed="1500"></h2>
+      <h2 class="timer count-title count-number" data-to="6666" data-speed="1500"></h2>
       <p class="count-text ">NARCOTICS</p>
     </div>
 </div>
     <br><br><br><br><br><br><br>
-    <h1>Number of video uploads in '.$username.'</h1>
+    <h1>Number of video uploads</h1>
     <div class="wrapper">
     <div class="counter col_fourth">
-      <h2 class="timer count-title count-number" data-to="'.$pv.'" data-speed="1500"></h2>
+      <h2 class="timer count-title count-number" data-to="544" data-speed="1500"></h2>
        <p class="count-text ">POLICE</p>
     </div>
 
     <div class="counter col_fourth">
-      <h2 class="timer count-title count-number" data-to="'.$iv.'" data-speed="1500"></h2>
+      <h2 class="timer count-title count-number" data-to="444" data-speed="1500"></h2>
       <p class="count-text ">INCOME TAX</p>
     </div>
 
     <div class="counter col_fourth">
-      <h2 class="timer count-title count-number" data-to="'.$fv.'" data-speed="1500"></h2>
+      <h2 class="timer count-title count-number" data-to="633" data-speed="1500"></h2>
       <p class="count-text ">FOREST</p>
     </div>
 
     <div class="counter col_fourth end">
-      <h2 class="timer count-title count-number" data-to="'.$nv.'" data-speed="1500"></h2>
+      <h2 class="timer count-title count-number" data-to="6678" data-speed="1500"></h2>
       <p class="count-text ">NARCOTICS</p>
     </div>
 </div>
@@ -567,4 +569,4 @@ jQuery(function ($) {
     </script>
 
 </body>
-</html>';
+</html>
