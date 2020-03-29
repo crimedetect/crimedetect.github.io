@@ -4,6 +4,7 @@
 <title>home||Crime detect</title>
 	<link rel="stylesheet" type="text/css" href="radmin.css">
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" type="text/css" href="loadstyle.css">
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -12,18 +13,40 @@
 	
 </head>
 
-<body>
+<body onload="myfunction()">
+<div id='preloader'>
+<div class="loader">
+	<div class="loader-inner">
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+	</div>
+</div>
+</div>
+    <script>
+    
+        var preloader1=document.getElementById('preloader');
+        
+        function myfunction(){
+            preloader1.style.display='none';
+        }
+    </script>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li><a href="radmin.php">Home</a></li>
-	  <li class="active"><a href="check.html">Evidence</a></li>
-	  	  <li class="active"><a class="dropdown-toggle" data-toggle="dropdown" href="check.html">Evidence Check<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li class="active"><a href="policeimgcheck.php">IMAGE</a></li>
-          <li><a href="policevidcheck.php">VIDEO</a></li>
-        </ul>
-      </li>
+      <li><a href="regionaladmin.php">Home</a></li>
      </ul>
   </div>
 </nav>

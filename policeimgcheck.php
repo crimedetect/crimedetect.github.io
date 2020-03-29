@@ -16,8 +16,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li><a href="radmin.php">Home</a></li>
-	  <li><a href="check.html">Evidence</a></li>
+      <li><a href="regionaladmin.php">Home</a></li>
      </ul>
   </div>
 </nav>

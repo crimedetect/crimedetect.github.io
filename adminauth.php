@@ -11,14 +11,14 @@
 			if($check == 1)
             {	
 				if($r["category"]==1){
-					header("location:adminhome.php");
+					header("location:adminhome.html");
 				}else{
 					$_SESSION['username']=$user;
-					header("location:rhome.php");
+					header("location:regionaladmin.php");
 				}
 				
 			}else{
-				header("location:home.php?loginfailed");
+				header("location:home.html?loginfailed");
 			}
 
 ?>

@@ -10,7 +10,7 @@
   right: 0;
   bottom: 0;
   min-width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   z-index: -1
 }
 
@@ -28,52 +28,265 @@ font-family: 'Henny Penny', cursive;
 }
 body {
     width: 100vw;
-    height: 150vh;
+    height: 100vh;
     margin: 0;
     padding: 0;
+    position: absolute;
     background-image: red;
     background-repeat: no-repeat;
     background-size: cover;
 }
  
-section {
-    display: flex;
-    justify-content: center;
+.logo h3 {
+
+  position: relative;
+  top: -10px;
+  left: 35px;
+    color: white;
 }
- 
-nav {
-    background-color: rgba(253, 253, 253, 0.78);
-    width: 100vw;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.header_menu{
+  position: fixed;
+  top: 36px;
+  background: transparent;
+  background-size: cover;
+  width: 100%;
+  transition: all 0.3s ease;
+  z-index: 99999;
+   box-shadow: 0px 1px rgba(240, 122, 122, 0.72);
 }
- 
-.menu {
-    font-size: 2vw;
-    padding: 0vh 2vw 0vh 2vw;
-    text-decoration: none;
-    font-family: 'Germania One';
-    color: forestgreen;
+.header_menu{
+  width: 100%;
+  height: 6%;
+  display: flex;
+    position: absolute;
+  flex-direction: row;
+  align-items: center;
+/*  border:1px solid red;*/
 }
- 
-.menuitem {
-    text-decoration: none;
-    padding: 1vw 4vh 1vw 4vh;
-    font-family: 'Lobster';
-    font-size: 1.5vw;
-    color: black;
-    display: block;
+
+.logo{
+  width: 20%;
+  text-align: center;
+
 }
- 
-.menuitem:hover {
-    background-color: rgba(247, 245, 245, 0.47);
+h2{
+  color: white;
+}
+.content{
+  position: relative;
+  height:auto;
+  margin: 0;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+.logo h3{
+  color: solid white;
+  letter-spacing: 1px;
+}
+
+.menu_list{
+  width: 80%;
+  text-align: right;
+  padding-right: 50px;
+}
+
+.menu_list li{
+  display: inline-block;
+  text-transform: uppercase;
+  list-style: none;
+  letter-spacing: 2px;
+  padding-left: 50px;
+}
+
+.menu_list li a{
+  color: white;
+  text-decoration: none;
+}
+
+.menu_list li a:hover{
+  color:orange;
+}
+
+.logo h3 span {
+  position: relative;
+}
+
+
+.ud_1 {
+  -webkit-animation: bounce1 3s ease-in-out infinite running;
+}
+.ud_2 {
+  -webkit-animation: bounce2 3s ease-in-out infinite running;
+}
+.ud_3 {
+  -webkit-animation: bounce3 3s ease-in-out infinite running;
+}
+.ud_4 {
+  -webkit-animation: bounce4 3s ease-in-out infinite running;
+}
+.ud_5 {
+  -webkit-animation: bounce5 3s ease-in-out infinite running;
+}
+.ud_6 {
+  -webkit-animation: bounce6 3s ease-in-out infinite running;
+}
+.ud_7 {
+  -webkit-animation: bounce7 3s ease-in-out infinite running;
+}
+.ud_8 {
+  -webkit-animation: bounce8 3s ease-in-out infinite running;
+}
+.ud_9 {
+  -webkit-animation: bounce9 3s ease-in-out infinite running;
+}
+.ud_10 {
+  -webkit-animation: bounce10 3s ease-in-out infinite running;
+}
+.ud_11 {
+  -webkit-animation: bounce11 3s ease-in-out infinite running;
+}
+
+
+@-webkit-keyframes bounce1 {
+  0% {
+    bottom: 0;
+  }
+  5% {
+    bottom: 15px;
+  }
+  10% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce2 {
+  5% {
+    bottom: 0;
+  }
+  10% {
+    bottom: 15px;
+  }
+  15% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce3 {
+  10% {
+    bottom: 0;
+  }
+  15% {
+    bottom: 15px;
+  }
+  20% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce4 {
+  15% {
+    bottom: 0;
+  }
+  20% {
+    bottom: 15px;
+  }
+  25% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce5 {
+  20% {
+    bottom: 0;
+  }
+  25% {
+    bottom: 15px;
+  }
+  30% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce6 {
+  25% {
+    bottom: 0;
+  }
+  30% {
+    bottom: 15px;
+  }
+  35% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce7 {
+  30% {
+    bottom: 0;
+  }
+  35% {
+    bottom: 15px;
+  }
+  40% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce8 {
+  35% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 15px;
+  }
+  45% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce9 {
+  40% {
+    bottom: 0;
+  }
+  45% {
+    bottom: 15px;
+  }
+  50% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce10 {
+  45% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 15px;
+  }
+  55% {
+    bottom: 0;
+  }
+}
+@-webkit-keyframes bounce11 {
+  50% {
+    bottom: 0;
+  }
+  55% {
+    bottom: 15px;
+  }
+  60% {
+    bottom: 0;
+  }
 }
 .content{
   position: absolute;
   margin: 85px 10px
 }
+        
 </style>
 </head>
 
@@ -81,13 +294,31 @@ nav {
   <div class="vid">
   <video width="100%" height="100%" src="viabout.mp4" autoplay muted loop></video> 
 </div>
-<section>
-        <nav>
-            <a href="home.php">Home</a>&nbsp;&nbsp;&nbsp;
-            <a href="upload.html">UPLOAD</a>&nbsp;&nbsp;&nbsp;
-            <a href="about.html">ABOUT</a>
-        </nav>
-    </section>
+<div class="header_menu">
+    <div class="logo"> 
+      <h3>
+  <span class="ud_bounce ud_1">C</span>
+  <span class="ud_bounce ud_2">R</span>
+  <span class="ud_bounce ud_3">I</span>
+  <span class="ud_bounce ud_4">M</span>
+  <span class="ud_bounce ud_5">E</span>
+  <span class="ud_bounce ud_6">D</span>
+  <span class="ud_bounce ud_7">E</span>
+  <span class="ud_bounce ud_8">T</span>
+  <span class="ud_bounce ud_9">E</span>
+  <span class="ud_bounce ud_10">C</span>
+  <span class="ud_bounce ud_11">T</span>
+</h3>
+    </div>
+    <div class="menu_list">
+      <ul>
+        <li><a href="Home.html" >home</a></li>
+        <li><a href="upload.html">upload</a> </li>
+        <li><a href="about.html">about</a></li>
+      </ul>
+    </div>
+  </div>
+
     <div class="content">
 <center><h1><u>ABOUT</u></h1>
 <h2><p>Crime detectis a non-profit organisation, which is created to reduce the gap between law enforcement and society. The idea of this platform came to existense by the continues hardwork of four aspiring b-tech students in 2019.</p></h2><pre><h2>

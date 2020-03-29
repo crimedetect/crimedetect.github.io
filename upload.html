@@ -5,28 +5,300 @@
 	
 	<link rel="stylesheet" type="text/css" href="uploadstyle.css">
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	
+  <style type="text/css">
+
+.logo h3 {
+
+  position: relative;
+  top: -10px;
+  left: 35px;
+}
+html{
+  scroll-behavior: smooth;
+}
+.header_menu{
+  position: fixed;
+  top: 36px;
+  background: transparent white;
+  background-size: cover;
+  width: 100%;
+  height: 40px;
+  transition: all 0.3s ease;
+  z-index: 99999;
+}
+.header_menu{
+  width: 100%;
+  height: 6%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+/*  border:1px solid red;*/
+}
+
+.logo{
+  width: 20%;
+  text-align: center;
+
+}
+h2{
+  color: black;
+}
+.content{
+  position: absolute;
+  height:auto;
+  margin: 0;
+  top: 150px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+.logo h3{
+  color: solid black;
+  letter-spacing: 1px;
+}
+
+.menu_list{
+  width: 80%;
+  text-align: right;
+  padding-right: 50px;
+}
+
+.menu_list li{
+  display: inline-block;
+  text-transform: uppercase;
+  list-style: none;
+  letter-spacing: 2px;
+  padding-left: 50px;
+}
+
+.menu_list li a{
+  color: black;
+  text-decoration: none;
+}
+
+.menu_list li a:hover{
+  color:blue;
+}
+
+.logo h3 span {
+  position: relative;
+}
+
+
+.ud_1 {
+  -webkit-animation: bounce1 3s ease-in-out infinite running;
+}
+.ud_2 {
+  -webkit-animation: bounce2 3s ease-in-out infinite running;
+}
+.ud_3 {
+  -webkit-animation: bounce3 3s ease-in-out infinite running;
+}
+.ud_4 {
+  -webkit-animation: bounce4 3s ease-in-out infinite running;
+}
+.ud_5 {
+  -webkit-animation: bounce5 3s ease-in-out infinite running;
+}
+.ud_6 {
+  -webkit-animation: bounce6 3s ease-in-out infinite running;
+}
+.ud_7 {
+  -webkit-animation: bounce7 3s ease-in-out infinite running;
+}
+.ud_8 {
+  -webkit-animation: bounce8 3s ease-in-out infinite running;
+}
+.ud_9 {
+  -webkit-animation: bounce9 3s ease-in-out infinite running;
+}
+.ud_10 {
+  -webkit-animation: bounce10 3s ease-in-out infinite running;
+}
+.ud_11 {
+  -webkit-animation: bounce11 3s ease-in-out infinite running;
+}
+
+
+@-webkit-keyframes bounce1 {
+  0% {
+    bottom: 0;
+  }
+  5% {
+    bottom: 15px;
+  }
+  10% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce2 {
+  5% {
+    bottom: 0;
+  }
+  10% {
+    bottom: 15px;
+  }
+  15% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce3 {
+  10% {
+    bottom: 0;
+  }
+  15% {
+    bottom: 15px;
+  }
+  20% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce4 {
+  15% {
+    bottom: 0;
+  }
+  20% {
+    bottom: 15px;
+  }
+  25% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce5 {
+  20% {
+    bottom: 0;
+  }
+  25% {
+    bottom: 15px;
+  }
+  30% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce6 {
+  25% {
+    bottom: 0;
+  }
+  30% {
+    bottom: 15px;
+  }
+  35% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce7 {
+  30% {
+    bottom: 0;
+  }
+  35% {
+    bottom: 15px;
+  }
+  40% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce8 {
+  35% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 15px;
+  }
+  45% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce9 {
+  40% {
+    bottom: 0;
+  }
+  45% {
+    bottom: 15px;
+  }
+  50% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes bounce10 {
+  45% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 15px;
+  }
+  55% {
+    bottom: 0;
+  }
+}
+@-webkit-keyframes bounce11 {
+  50% {
+    bottom: 0;
+  }
+  55% {
+    bottom: 15px;
+  }
+  60% {
+    bottom: 0;
+  }
+}
+.canvas-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+canvas {}
+  </style>
 </head>
 
 <body>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li><a href="home.php">Home</a></li>
-      <li><a href="upload.html">UPLOAD</a></li>
-      <li><a href="about.html">ABOUT</a></li>
-    </ul>
-  </div>
-</nav>
+  <div class="canvas-wrapper">
+        <canvas></canvas>
 
-<center>
+      </div>
+<div class="header_menu">
+    <div class="logo"> 
+      <h3>
+  <span class="ud_bounce ud_1">C</span>
+  <span class="ud_bounce ud_2">R</span>
+  <span class="ud_bounce ud_3">I</span>
+  <span class="ud_bounce ud_4">M</span>
+  <span class="ud_bounce ud_5">E</span>
+  <span class="ud_bounce ud_6">D</span>
+  <span class="ud_bounce ud_7">E</span>
+  <span class="ud_bounce ud_8">T</span>
+  <span class="ud_bounce ud_9">E</span>
+  <span class="ud_bounce ud_10">C</span>
+  <span class="ud_bounce ud_11">T</span>
+</h3>
+    </div>
+    <div class="menu_list">
+      <ul>
+        <li><a href="Home.html" >home</a></li>
+        <li><a href="upload.html">upload</a> </li>
+        <li><a href="about.html">about</a></li>
+      </ul>
+    </div>
+  </div>
+
+<div class="content">
 <h2><u>UPLOAD MEDIA</u></h2>
-<br></center>
 <div class="buttons">
   <button id="imageu" class="blob-btn">
     IMAGE
@@ -62,6 +334,9 @@
     </filter>
   </defs>
 </svg>
+</div>
+</div>
+</div>
 <script type="text/javascript">
     document.getElementById("imageu").onclick = function () {
         location.href = "imageup.html";
@@ -69,6 +344,102 @@
 	document.getElementById("videou").onclick = function () {
         location.href = "videoup.html";	
     };
+</script>
+<script type="text/javascript">
+  const canvas = document.querySelector("canvas");
+const canvasHeight = window.innerHeight;
+const canvasWidth = window.innerWidth;
+canvas.height = canvasHeight;
+canvas.width = canvasWidth;
+
+const ctx = canvas.getContext("2d")
+
+const canvasCenterX = canvas.width / 2
+const canvasCenterY = canvas.height / 2
+let mousePosition = {
+    x: canvasCenterX,
+    y: canvasCenterY
+}
+
+addEventListener("mousemove", event => {
+    mousePosition.x = event.clientX
+    mousePosition.y = event.clientY
+})
+
+function randomRange(min, max) {
+    return Math.floor((Math.random() * (max - min + 1)) + min)
+}
+
+const colorSet1 = ['#ede7f6', '#d1c4e9', '#b39ddb', '#9575cd', '#7e57c2', '#673ab7']
+const colorSet2 = ['#44af69', '#e84855', '#f9dc5c', '#3185fc', '#f896d8']
+const colors = colorSet2;
+
+function randomColor() {
+
+    return colors[Math.floor(Math.random() * colors.length)]
+}
+
+function Particle(x, y, radius, color, velocity) {
+    this.x = x;
+    this.y = y;
+    this.color = color;
+    this.radius = radius;
+    this.radians = Math.random() * Math.PI * 2
+    this.velocity = velocity
+    this.distanceFromCenter = {
+        x: randomRange(60, 150),
+        y: randomRange(60, 150)
+    }
+    //draws a circle
+    this.lastMousePosition = {
+        x,
+        y
+    }
+    this.draw = function () {
+        ctx.beginPath()
+
+        ctx.lineWidth = this.radius
+        ctx.strokeStyle = this.color
+        ctx.moveTo(this.lastPostion.x, this.lastPostion.y)
+        ctx.lineTo(this.x, this.y)
+        ctx.stroke()
+        ctx.closePath()
+    }
+    this.update = function () {
+        //moves circle along x axis by (-1 to 1)x some value
+        this.lastPostion = {
+            x: this.x,
+            y: this.y
+        }
+        this.radians = this.radians + this.velocity;
+        this.lastMousePosition.x += (mousePosition.x - this.lastMousePosition.x) * 0.05;
+        this.lastMousePosition.y += (mousePosition.y - this.lastMousePosition.y) * 0.05;
+        this.x = this.lastMousePosition.x + Math.cos(this.radians) * this.distanceFromCenter.x
+        this.y = this.lastMousePosition.y + Math.sin(this.radians) * this.distanceFromCenter.x
+
+        this.draw()
+    }
+}
+
+
+
+let particles = []
+
+function init() {
+    for (let i = 0; i < 200; i++) {
+        particles.push(new Particle(canvasCenterX, canvasCenterY, 5, randomColor(), 0.02))
+    }
+
+}
+
+function animate() {
+    requestAnimationFrame(animate)
+    ctx.fillStyle = "rgba(255,255,255,0.045)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+    particles.forEach(particle => particle.update())
+}
+init()
+animate(particles)
 </script>
 </body>
 </html>

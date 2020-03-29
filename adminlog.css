@@ -30,6 +30,14 @@ input[type="submit"] {
     margin: 150px 200px 300px 200px;
 
 }
+#popup{
+    width: 300px;
+    height: 500px;
+    top: -57px;
+    left: 330px;
+    margin: 150px 200px 300px 200px;
+
+}
 .closev {
   position: relative;
   left: 250px;

@@ -8,349 +8,216 @@ session_start();
 <head>
 
 <title>crime detect</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.3/TweenMax.min.js"></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jquery.min.js"></script>
+<link  href="master.css" type="text/css">
+    
  <link rel="stylesheet" type="text/css" href="style1.css">
  <!--<link rel="stylesheet" type="text/css" href="anim.css">-->
 <link rel="stylesheet" type="text/css" href="logpop.css">
 
-<link rel="stylesheet" href="css/bootstrap.min.css"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+<link href="font.css" rel="stylesheet">
  
 <style>
-     
-body {
-    font-family: 'Roboto Condensed', sans-serif;  
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-   
+ body{
+            padding: 0;
+            margin: 0;
+        }
+     html {
+  font-family: 'Roboto Condensed', sans-serif;
 }
-
-
-.nav-up {
-    top: -40px;
-}
-
-
-li {
-    list-style: none;
-}
- 
- 
-/*------------------------ 2 Home ------------------------*/
-
-.main {
-    background: black no-repeat;
-    background-size: contain;
-    display: table;
-    width: 100%;
-    position: absolute;
-}
-
-.main:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    left: 0;
-    z-index: -1;
-    opacity: .85;
-    position: absolute;
-     
-}
-    .nav-icon{
-        margin-left: 990px;
-        margin-top: -540px;
-    }
-.main-title {
-    font-size: 24px;
-    line-height: 28px;
-    color: #fff;
-    font-weight: 400;
-}
-
-.hello {
-    color: #fff;
-    line-height: 51px;
-}
-
-.main-content {
-    padding: 0 60px;
-    vertical-align: middle;
-    display: table-cell;
-    height: 100%;
-    width: 100%;
-}
-
-/*------------------------ 2.1 Full Menu ------------------------*/
-
-.full-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background-size: cover;
-    opacity: 0;
-    visibility: hidden;   
-    transition: opacity 0.3s 0s, visibility 0s 0.3s;
-}
-
-/* Full Menu */
-
-.full-menu .modal-close {
-    /* 'X' icon */
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    padding: 50px;
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
-    background:rgba(0, 0, 0, 0.3) url(cd-icon-close.svg)no-repeat center center;
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
-    visibility: hidden;
-    opacity: 0;     
-    transform: scale(0);
-    visibility 0s 0.3s, opacity 0.3s 0s;
-     
-    transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
-}
-
-.no-touch .full-menu .modal-close:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.full-menu.visible {
-    background-size: 100%;
-    opacity: 1;
-    visibility: visible;   
-    transition: opacity 0.7s, visibility 0s;
-}
-
-.full-menu.visible .fullmenu-content {
-    -webkit-overflow-scrolling: touch;
-}
-
-.full-menu.visible .modal-close {
-    visibility: visible;
-    opacity: 1;    
-    transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;     
-    transform: scale(1);
-}
-
-@media only screen and (min-width: 1100px) {
-    .full-menu .fullmenu-content {
-        padding: 6em 5%;
-    }
-    .full-menu .modal-close {
-        height: 60px;
-        width: 60px;
-    }
-    .full-menu p {
-        font-size: 25px;
-    }
-}
-
-.cd-transition-layer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-}
-
-.cd-transition-layer .bg-layer {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translateY(-50%) translateX(-2%);   
-    transform: translateY(-50%) translateX(-2%);     
-    height: 100%;
-    /* our sprite is composed of 25 frames */
-    width: 2500%;
-    background: url(images.png) no-repeat 0 0;
-    background-size: 100% 100%;
-}
-
-.cd-transition-layer.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.cd-transition-layer.opening .bg-layer {     
-    animation: cd-sequence 1s steps(24);     
-    animation-fill-mode: forwards;
-}
-
-
-
-.no-cssanimations .cd-transition-layer {
-    display: none;
-}
-
- 
-@keyframes cd-sequence {
-    0% {
-        transform: translateY(-50%) translateX(-2%);
-    }
-    100% {        
-        transform: translateY(-50%) translateX(-98%);
-    }
-}
-
+#mainnav {
+  position: absolute;
+  font-family: 'Roboto Condensed', sans-serif;
+  z-index: 1;
     
+}
+#mainnav li {
+  margin: 55px 0;
+  left: -550px;
+  position: relative;
+  display: none;
     
-  
-
-
-
-/*------------------------ 2.2 Header ------------------------*/
-
-.full-menu .fullmenu-content {
-    height: 100%;
-    width: 100%;
-    display: table;
 }
+#mainnav a {
+  color: white;   
+  text-decoration: none;
+  font-size: 1.4em;
 
-.page-menu {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
+      
+
+} 
+        ul li{
+            list-style: none;
+            margin-top: -50px;
+            
+        }
+.hamb {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2.5em;
+  z-index: 1;
 }
-
-.page-menu li {
-    line-height: 50px;
-    margin-left: -50px;
+.hamb a {
+  color: #fff;
+  text-decoration: none;
 }
-
-.page-menu li:last-child {
-    line-height: 90px;
+#bubble {
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  position: fixed;
+  display: none;
+  z-index: 1;
+  background: rgba(0, 0, 0, .5);
 }
-
-.page-menu li a {
-    color: white;
-    font-size: 26px;
-    position: relative;
-    font-weight: 500;
      
-}
-
-.social img {
-    width: 15px;
-}
-
-.main .social {
-    margin-top: 30px;
-}
-
-.social a {
-    margin-right: 20px;
-}
-
-.social a:hover img {
-    opacity: .6;
-    transition: all ease 0.3s;
-}
-
-.social a:last-child {
-    margin-right: 0px;
-}
-
- 
- 
-
-header {
-    position: fixed;
-    padding: 30px;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-}
-
-
-.nav-icon {
-    width: 23px;
-    height: 18px;
-    position: relative;    
-    transform: rotate(0deg);     
-    transition: .5s ease-in-out;
-    cursor: pointer;
-    margin-top: 7px;
-}
-
-.nav-icon span {
-    display: block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background: #fff;
-    opacity: 1;    
-    transform: rotate(0deg);   
-    transition: .25s ease-in-out;
-}
-
-.nav-icon span:nth-child(1) {
-    top: 0px;     
-    transform-origin: left center;
-}
-
-.nav-icon span:nth-child(2) {
-    top: 6px;    
-    transform-origin: left center;
-}
-
-.nav-icon span:nth-child(3) {
-    top: 12px;     
-    transform-origin: left center;
-    width: 60%;
-    right: 0 !important;
-}
-
-.nav-icon:hover span:nth-child(3) {
-    width: 100%;
-}
-
-
-
-     
+        
+        .gap{
+             
+            color: white;
+            margin-top: 100px;
+            width: 200px;
+            
+             
+             
+        }
+        
 </style>
 </head>
 
 <body>
-<header> 
-	<div class="nav-icon float-right">
-		<span></span>
-		<span></span>
-		<span></span>
-	</div>
-</header>
+     <nav role='navigation' id="mainnav">
+    <br><br><br>
+  <ul class="gap">
+    <li><a class="active" href="home.php">Home</a></li>
+    <li><a href="upload.html">Upload the Evidence</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><button onclick="document.getElementById('id01').style.display='block'">Admin Login</button> </li>
+ 
+  </ul>
+</nav> 
+<div class="hamb">
+  <a href="#"><i class="fa fa-bars">&#9776;</i></a>
+</div>
 
-<!-- Full Menu -->
-<div class="full-menu">
-	<div class="fullmenu-content">
-		<ul class="page-menu">
-			<li><a class="active" href="home.php">Home</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="upload.html">Upload the Evidence</a></li>
-            <li><button onclick="document.getElementById('id01').style.display='block'">Admin Login</button> </li>
-			<li class="social">
-				<a href="#"><img src="icons/social/twitter.svg" alt=""></a>
-				<a href="#"><img src="icons/social/dribbble.svg" alt=""></a>
-				<a href="#"><img src="icons/social/instagram.svg" alt=""></a>
-				<a href="#"><img src="icons/social/send.svg" alt=""></a>
-			</li>
-           </ul>
-       
+<canvas id="bubble"></canvas>
+
+    <script src="jquery-3.3.1.js"></script>
+    <script src="jquery-ui.js"></script>
+<script>
+  
+var w = window.innerWidth,
+    h = window.innerHeight,
+    canvas = document.getElementById('bubble'),
+    ctx = canvas.getContext('2d'),
+    rate = 60,
+    arc = 100,
+    time,
+    count,
+    size = 7,
+    speed = 20,
+    lights = new Array,
+    colors = ['#d59254','#ffffff','#1f2839','#cf7693'];
+
+canvas.setAttribute('width',w);
+canvas.setAttribute('height',h);
+
+function init() {
+  time = 0;
+  count = 0;
+
+  for(var i = 0; i < arc; i++) {
+    lights[i] = {
+      x: Math.ceil(Math.random() * w),
+      y: Math.ceil(Math.random() * h),
+      toX: Math.random() * 5 + 1,
+      toY: Math.random() * 5 + 1,
+      c: colors[Math.floor(Math.random()*colors.length)],
+      size: Math.random() * size
+    }
+  }
+}
+
+function bubble() {
+  ctx.clearRect(0,0,w,h);
+
+  for(var i = 0; i < arc; i++) {
+    var li = lights[i];
+    
+    ctx.beginPath();
+    ctx.arc(li.x,li.y,li.size,0,Math.PI*2,false);
+    ctx.fillStyle = li.c;
+    ctx.fill();
+    
+    li.x = li.x + li.toX * (time * 0.05);
+    li.y = li.y + li.toY * (time * 0.05);
+    
+    if(li.x > w) { li.x = 0; }
+    if(li.y > h) { li.y = 0; }
+    if(li.x < 0) { li.x = w; }
+    if(li.y < 0) { li.y = h; }
+  }
+  if(time < speed) {
+    time++;
+  }
+  timerID = setTimeout(bubble,1000/rate);
+}
+init();
+bubble(); 
+
+//navigation (this is my code)
+var animation = 'easeOutCubic';
+    delay     = 60;
+
+$(document)
+  .on('click', '.fa-bars', function(){
+    var i = 0;
+    $('nav').before($('#bubble'));
+    $('#bubble').fadeIn();
+    $('#mainnav').find('li').each(function(){
+      var that = $(this);
+      i++;
+      (function(i, that){
+          setTimeout(function(){
+            that
+              .animate(
+                { 'left'   : '20px' }, 
+                { duration : 350, 
+                  easing   : animation })
+              .fadeIn({queue: false});
+          }, delay * i)
+      }(i, that))
+    }); 
+    $('.fa-bars').fadeOut(100,function(){
+      $(this)
+        .removeClass('fa-bars')
+        .addClass('fa-times')
+        .html('&#10060;')
+        .fadeIn(); 
+    });
+  })
+  .on('click', '#bubble, .fa-times', function(){ 
+    $('#bubble').fadeOut();
+    $('#mainnav').find('li')
+      .animate(
+        { 'left'   : '-550px' }, 
+        { duration : 250 })
+      .fadeOut({queue: false});
+    
+    $('.hamb').fadeOut(100, function(){
+      $(this)
+        .find($('i'))
+        .removeClass('fa-times')
+        .addClass('fa-bars')
+        .html('&#9776;')
+        .end()
+        .fadeIn();
+    });
+  }) 
+    
+</script>
     <div id="id01" class="modal"> <!--<img src="logicon.jpg" alt="user" class="avatar">-->
  <form  class="modal-content animate" method="POST" action="adminauth.php">
     
@@ -364,7 +231,6 @@ header {
     <input type="submit" value="Login">
 </div>
   </form>
-</div>
 <script> 
         var modal = document.getElementById('id01'); 
         window.onclick = function(event) { 
@@ -373,19 +239,10 @@ header {
             } 
         } 
     </script> 
-		
-        <a href="home.php" class="modal-close">Close</a>
 </div>
-</div>
-	
-</div>
-<div class="cd-transition-layer visible opening"> 
-	<div class="bg-layer"></div>
-</div><!-- Ink Transition -->
-
 <div class="wrapper">
  
-<section class="main">
+    <section class="main">
 	<div class="main-content">
         <video src="smoke2.mp4" autoplay muted loop></video> 
     <h1>
@@ -402,197 +259,9 @@ header {
       <span>T</span>
     </h1>
 	</div>
-</section>
+    </section>
 </div>
-	 
-	 
-<script src="jquery-2.1.4.min.js"></script>
 
- <script>
- 'use strict'; 
-
-$(document).ready( function() {
- 
-	
-
-    var width = 100,
-        perfData = window.performance.timing, 
-        EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
-        time = ((EstimatedTime/1000)%50) * 1
-
-
-    // Percentage Increment Animation
-    var PercentageID = $(".percentage"),
-            start = 0,
-            end = 100,
-            durataion = time;
-            animateValue(PercentageID, start, end, durataion);
-
-    function animateValue(id, start, end, duration) {
-
-        var range = end - start,
-          current = start,
-          increment = end > start? 1 : -1,
-          stepTime = Math.abs(Math.floor(duration / range)),
-          obj = $(id);
-
-
-        var timer = setInterval(function() {
-            current += increment;
-            $(obj).text(current);
-          //obj.innerHTML = current;
-            if (current == end) {
-                clearInterval(timer);
-            }
-        }, stepTime);
-    }
-    
-
-    
-	setTimeout(function(){
-        $('.preloader').fadeOut();
-        
-        $('.cd-transition-layer').addClass('closing').delay(1000).queue(function(){
-            $(this).removeClass("visible closing opening").dequeue();
-        });
-        
-	}, time);
-		
-    
-
-
-   // FADE OUT EFFECT WHEN CLICK A LINK
-    $(document).on("click", "a:not(.lightbox)", function () {
-        var newUrl = $(this).attr("href");
-        if (!newUrl || newUrl[0] === "#") {
-            location.hash = newUrl;
-            return;
-        }
-        $("html").fadeOut(function () {
-            location = newUrl;
-        });
-        return false;
-    });
-    
-
-    var paget = $(".page-title .title").text();
-
-    $( ".page-title").append("<span></span>");
-    $( ".page-title span").append(paget);
-
-
-    
-    //posts page hover 
-    $('.blog-post .blog-link').hover(function(){
-        $(this).parent('.content-outter').parent('.blog-post').toggleClass('mousef');
-        $(this).parent('.blog-post').toggleClass('mousef');
-    });
- 
-});  
-
-
-
-
-$(window).load( function() {
- 
-
-function smokeeffect () { 
-    var modalTrigger = $('.nav-icon'),
-        transitionLayer = $('.cd-transition-layer'),
-        transitionBackground = transitionLayer.children(),
-        modalWindow = $('.full-menu');
-
-    var frameProportion = 1.78, //png frame aspect ratio
-        frames = 25, //number of png frames
-        resize = false;
-
-    //set transitionBackground dimentions
-    setLayerDimensions();
-    $(window).on('resize', function(){
-        if( !resize ) {
-            resize = true;
-            (!window.requestAnimationFrame) ? setTimeout(setLayerDimensions, 300) : window.requestAnimationFrame(setLayerDimensions);
-        }
-    });
-
-    //open modal window
-    modalTrigger.on('click', function(event){   
-        event.preventDefault();
-        transitionLayer.addClass('visible opening');
-        var delay = ( $('.no-cssanimations').length > 0 ) ? 0 : 600;
-        setTimeout(function(){
-            modalWindow.addClass('visible');
-        }, delay);
-    });
-
-    //close modal window
-    modalWindow.on('click', '.modal-close', function(event){
-        event.preventDefault();
-        transitionLayer.addClass('closing');
-        modalWindow.removeClass('visible');
-        transitionBackground.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
-            transitionLayer.removeClass('closing opening visible');
-            transitionBackground.off('webkitAnimationEnd oanimationend msAnimationEnd animationend');
-        });
-    });
-
-    function setLayerDimensions() {
-        var windowWidth = $(window).width(),
-            windowHeight = $(window).height(),
-            layerHeight, layerWidth;
-
-        if( windowWidth/windowHeight > frameProportion ) {
-            layerWidth = windowWidth;
-            layerHeight = layerWidth/frameProportion;
-        } else {
-            layerHeight = windowHeight*1.2;
-            layerWidth = layerHeight*frameProportion;
-        }
-
-        transitionBackground.css({
-            'width': layerWidth*frames+'px',
-            'height': layerHeight+'px',
-        });
-
-        resize = false;
-    }
-
-}
-smokeeffect()
-
- 
-    
-/*--------------------------------------------------
- Hero Section Height
----------------------------------------------------*/	
-     function homeh() {
-        var hometext = $('.main')
-
-        hometext.css({
-            "height": $(window).height() + "px"
-        });
-    }
-    homeh();
-    $(window).resize(homeh);
-
-
-    $( ".page-menu li:not(.social) a, .portfolio_filter ul li a").append( "<span></span>" );
-
-    $('.nav-icon').on("click", function(){
-            $(this).toggleClass('modal-close');
-    });
- 
- 
-     
-}); // document load end 
-
-
-
-
-  
-</script>
-
-    </div>  
     </body>
 </html>
 <?php

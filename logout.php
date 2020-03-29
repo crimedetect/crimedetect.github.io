@@ -3,5 +3,5 @@
 		$_SESSION['username']='';
 		session_destroy();
 		
-        header("location:Home.php");
+        header("location:Home.html");
 ?>

@@ -15,7 +15,7 @@ $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 's8crimedetect@gmail.com';                 // SMTP username
-$mail->Password = 's8project@2020';                           // SMTP password
+$mail->Password = 'project.s8@2020';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
@@ -27,7 +27,7 @@ $mail->addAttachment("$filepath");         // Add attachments
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = $subject;
-$mail->Body    = '<body>'.$message.'</body>';
+$mail->Body    = '<body>The incident was uploaded to crimedetect website in date under the categery categery in location $loc with the following description '.$message.'. The video/image was checked for forgery and hope this can be a crucial evidence for the investigation</body>';
 
 if(!$mail->send()) {
     echo 'Message could not be sent.';
