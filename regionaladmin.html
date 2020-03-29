@@ -1,8 +1,4 @@
 
-<?php
-session_start();
-            $username=$_SESSION['username'];
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -359,51 +355,7 @@ font-family: "dosis", sans-serif;
 </script>
 </section>
 <section id="count" class="box">
-  <?php
-            
-            $conn1 = mysqli_connect("localhost","root","","crimedetect");
-            $sql1="select count(*) from imgpolice where district ='".$username."';";
-			$m1=mysqli_query($conn1,$sql1);
-            $row1= mysqli_fetch_array($m1);
-            $p=$row1[0];
-            $conn2 = mysqli_connect("localhost","root","","crimedetect");               
-            $sql2="select count(*) from imgincometax where district ='".$username."';";
-			$m2=mysqli_query($conn2,$sql2);
-            $row2= mysqli_fetch_array($m2);
-            $i=$row2[0];
-            $conn3 = mysqli_connect("localhost","root","","crimedetect");
-            $sql3="select count(*) from imgforest where district ='".$username."';";
-			$m3=mysqli_query($conn3,$sql3);
-            $row3= mysqli_fetch_array($m3);
-            $f=$row3[0];
-            $conn4 = mysqli_connect("localhost","root","","crimedetect");
-            $sql4="select count(*) from imgnarcotics where district ='".$username."';";
-			$m4=mysqli_query($conn4,$sql4);
-            $row4= mysqli_fetch_array($m4);
-            $n=$row4["count(*)"];
-            $conn5 = mysqli_connect("localhost","root","","crimedetect");
-            $sql5="select count(*) from vidpolice where district ='".$username."';";
-			$m5=mysqli_query($conn5,$sql5);
-            $row5= mysqli_fetch_array($m5);
-            $pv=$row5["count(*)"];
-            $conn6 = mysqli_connect("localhost","root","","crimedetect");
-            $sql6="select count(*) from vidincometax where district ='".$username."';";
-			$m6=mysqli_query($conn6,$sql6);
-            $row6= mysqli_fetch_array($m6);
-            $iv=$row6["count(*)"];
-            $conn7 = mysqli_connect("localhost","root","","crimedetect");
-            $sql7="select count(*) from vidforest where district ='".$username."';";
-			$m7=mysqli_query($conn7,$sql7);
-            $row7= mysqli_fetch_array($m7);
-            $fv=$row7["count(*)"];
-            $conn8 = mysqli_connect("localhost","root","","crimedetect");
-            $sql8="select count(*) from vidnarcotics where district ='".$username."';";
-			$m8=mysqli_query($conn8,$sql8);
-            $row8= mysqli_fetch_array($m8);
-            $nv=$row8["count(*)"];
-
-
-   ?>
+ 
 	<h1>COUNT</h1>
 	<h1>Number of image uploads</h1>
     <div class="wrapper">
