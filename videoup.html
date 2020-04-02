@@ -1,30 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>home||Crime detect</title>
-	<link rel="stylesheet" type="text/css" href="homestyle.css">
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	
+  <title>VIDEO UPLOAD</title>
+<link rel="stylesheet" type="text/css" href="dataup.css">
 </head>
 
 <body>
-<img src="logo.png"  width="25%" height="100px">
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li><a href="home.php">Home</a></li>
-      <li class="active"><a href="upload.html">UPLOAD</a>
-      <li><a href="about.html">ABOUT</a></li>
-      </li>
-    </ul>
-  </div>
-</nav>
-<marquee>Help line : 000-111-222 </marquee>
+    <body>
+    <div id="logo"> 
+  <h1><i> UPLOAD VIDEO EVIDENCE</i></h1>
+</div> 
 <script>
 var stateObject = {
 "India": { "Delhi": ["new Delhi", "North Delhi"],
@@ -57,44 +42,100 @@ districtSel.options[districtSel.options.length] = new Option(district[i], distri
 }
 }
 </script>
-		<div>
-		<font color="skyblue" size="5">
-		<fieldset style="float:center;background-color:black">
-	<center><h2><u>UPLOAD VIDEO EVIDENCE</u></h2></center>
-			<font size="4">
-				<form name="myform" id="myForm" action="vidup.php" method="POST" enctype="multipart/form-data">
-					<div align="center">
-						<input type="file" name="file" >
-					</div><br>
-					<div align="center">
-						Select Country: <select name="state" id="countySel" size="1">
-					<option value="" selected="selected">Select Country</option>
-					</select><br>
-					<br>
-				Select State: <select name="countrya" id="stateSel" size="1">
+		<section class="stark-login">
+    
+      <form name="myform" id="myForm" action="vidup.php" method="POST" enctype="multipart/form-data" >
+          <div id="fade-box">
+						<input class="a" type="file" name="file">				
+				<select class="f" name="state" id="countySel" size="1">
+					<option class="f" value="" selected="selected">Select Country</option>
+					</select>
+				<select class="b" name="countrya" id="stateSel" size="1">
 				<option value="" selected="selected">Please select Country first</option>
 				</select>
-				<br>
-				<br>
-				Select District: <select name="district" id="districtSel" size="1">
+                <select class="c" name="district" id="districtSel" size="1">
 				<option value="" selected="selected">Please select State first</option>
-				</select><br>
-				<br>
-				Select Category/Type:<select name="typ" id="typsel" size="1">
+				</select>
+				<select class="d" name="typ" id="typsel" size="1">
 				<option value="police" selected="selected">Police</option>
 				<option value="forest">Forest</option>
 				<option value="incometax">Income tax</option>
 				<option value="narcotics">Narcotics</option>
-				</select><br>
-					</div><br>
-					<div align="center">
-					<textarea rows="3" cols="50" name="discrip" placeholder="Describe something about incident {eg. Date and Time}"></textarea>
-					</div>
-					<div align="center">
-					<input type="submit" value="SUBMIT" >
-				</form>	
-		</fieldset>
-		</div>
-</font>
+				</select>
+					<textarea class="e" rows="3" cols="50" name="discrip" placeholder="Describe something about incident {eg. Date and Time}"></textarea>
+					<input class="button" type="submit" name="submit" value="SUBMIT"/>
+      </form>
+      <div class="hexagons">
+        <span>&#x2B22;</span>
+        <span>&#x2B22;</span>
+        <span>&#x2B22;</span>
+        <span>&#x2B22;</span>
+        <span>&#x2B22;</span>
+        <span>&#x2B22;</span>
+        <span>&#x2B22;</span>
+        <span>&#x2B22;</span>
+        <span>&#x2B22;</span>
+        <span>&#x2B22;</span>
+        <span>&#x2B22;</span>
+        <span>&#x2B22;</span>
+        <br>
+          <span>&#x2B22;</span>
+          <span>&#x2B22;</span>
+          <span>&#x2B22;</span>
+          <span>&#x2B22;</span>
+          <span>&#x2B22;</span>
+          <span>&#x2B22;</span>
+          <span>&#x2B22;</span>
+          <span>&#x2B22;</span>
+          <span>&#x2B22;</span>
+          <span>&#x2B22;</span>
+          <span>&#x2B22;</span>
+          <br>
+            <span>&#x2B22;</span>
+            <span>&#x2B22;</span>
+            <span>&#x2B22;</span>
+            <span>&#x2B22;</span> 
+            <span>&#x2B22;</span>
+            <span>&#x2B22;</span>
+            <span>&#x2B22;</span>
+            <span>&#x2B22;</span>
+            <span>&#x2B22;</span>
+            <span>&#x2B22;</span>
+            <span>&#x2B22;</span>
+            <span>&#x2B22;</span>
+            
+            <br>
+              <span>&#x2B22;</span>
+              <span>&#x2B22;</span>
+              <span>&#x2B22;</span>
+              <span>&#x2B22;</span>
+              <span>&#x2B22;</span>
+              <span>&#x2B22;</span>
+              <span>&#x2B22;</span>
+              <span>&#x2B22;</span>
+              <span>&#x2B22;</span>
+              <span>&#x2B22;</span>
+              <span>&#x2B22;</span>
+              <br>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+                <span>&#x2B22;</span>
+              </div>      
+            </section> 
+            
+            <div id="circle1">
+              <div id="inner-cirlce1">
+                <h2> </h2>
+              </div>
+            </div>  
 	</body>
 </html>
