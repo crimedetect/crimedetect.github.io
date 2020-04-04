@@ -53,8 +53,7 @@ Stark Industries Logo
 .modal1 .close{
     position: absolute;
     margin: -20px;
-    top: 220px;
-    left: 860px;
+    top: 200px;
     z-index: 999999999;
 } 
 /* =========================================
@@ -73,7 +72,7 @@ Log in form
   border-radius: 5px;
   display: inline-block;
   height: 220px;
-    left: 330px;
+    left: 0px;
   margin: 200px auto 0;
   position: relative;
   z-index: 9999999999;
@@ -147,6 +146,7 @@ Log in form
 .modal1 .close{
     width:40px;
     height: 30px;
+    right: 27%;
     animation: input-entry 3s ease-in;
   background: #84d9d8;
   box-sizing: content-box;

@@ -25,6 +25,9 @@ body{
   /* background: url(../img/bg3.jpg) no-repeat center center fixed; */
   background-attachment: fixed;
   background-size: cover;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .wrapper .sidebar{
@@ -108,6 +111,9 @@ body{
   background-color: rgba(0, 0, 0, 0.0);
   height: 95vh;
   color: fff;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }

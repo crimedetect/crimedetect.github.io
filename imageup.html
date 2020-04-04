@@ -2,8 +2,36 @@
 <head>
   <title>IMAGE UPLOAD</title>
 <link rel="stylesheet" type="text/css" href="dataup.css">
+<link rel="stylesheet" type="text/css" href="uploadnav.css">
+<style type="text/css">
+  body{
+    background-color: black;
+     width: 100%;
+    height: 100vh;
+  }
+</style>
 </head>
     <body>
+      <!-- Start Nav Section -->
+<nav id="navbar" class="navbar">
+  <ul class="nav-menu">
+    <li>
+      <a data-scroll="home" href="home.html" class="dot">
+        <span>Home</span>
+      </a>
+    </li>
+    <li>
+      <a data-scroll="about" href="upload.html" class="dot">
+        <span>Upload Data</span>
+      </a>
+    </li>
+    <li>
+      <a data-scroll="services" href="about.html" class="dot">
+        <span>About</span>
+      </a>
+    </li>
+  </ul>
+</nav>
     <div id="logo"> 
   <h1><i>UPLOAD IMAGE EVIDENCE</i></h1>
 </div> 
@@ -134,19 +162,5 @@ districtSel.options[districtSel.options.length] = new Option(district[i], distri
                 <h2> </h2>
               </div>
             </div>
-            
-            
-            
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            
-            
-            
-            
-    </body>
+  </body>
 </html>

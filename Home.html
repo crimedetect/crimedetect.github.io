@@ -71,7 +71,7 @@ body {
     padding: 40px;
 }
 .text{
-  margin-top: 40px;
+  margin-top: 50px;
   color: white
   text-border:5px solid red;
   z-index: 9999;
@@ -90,6 +90,7 @@ body {
     font-family: 'brandon-grotesque', sans-serif;
     text-transform: uppercase;
     min-width: 200px;
+    z-index: 999999999999999;
     margin-top: 30px;
 
     &:hover {
@@ -107,7 +108,7 @@ body {
     }
 
     .border {
-        border: 5px solid white;
+        border: 5px solid red;
         transform: skewX(-20deg);
         height: 32px;
         border-radius: 3px;
@@ -115,8 +116,7 @@ body {
         position: relative;
         transition: 0.1s ease-out;
 
-        .left-plane,
-        .right-plane {
+        .left-plane, .right-plane {
             position: absolute;
             background: white;
             height: 32px;
@@ -198,7 +198,7 @@ body {
     right: 0;
     left: 0;
     top: 40px;
-    padding: 30px;
+    padding: 30px 0;
     text-align: center;
     opacity: 0;
     @include breakpoint($screen-sm-min) {
@@ -251,7 +251,7 @@ body {
         background-color: #4CAF50; 
         color: white; 
        
-        padding: 14px 20px; 
+        padding: 14px 15px; 
         margin: 8px 0; 
         border: none; 
         cursor: pointer; 
@@ -321,8 +321,10 @@ body {
         .gap{
              
             color: white;
-            margin-top: 100px;
-            width: 200px;             
+            margin-top: 50px;
+            width: 200px;
+            left: 0; 
+            margin-left: 0;            
         }
 
   #title {
@@ -788,7 +790,7 @@ let skyContainer = $('.sky-container');
 let xMark = $('.x-mark');
 
 
-$('.shift-camera-button').click(function() {
+$('.intro-container').click(function() {
   let introTimeline = new TimelineMax();
 
   introTimeline.add([
